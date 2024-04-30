@@ -1,17 +1,18 @@
 # index_work
 д.з индексы
-
+```
 --Для выполнения домашнего задания и последующей практики загрузил на локальный PostgreSQL развернутый на windows
 тестовую БД bookings (demo-big) с сайта https://postgrespro.ru/education/demodb и удалил все имеющиеся на ней индексы и ключи
 
---1. Создать индекс к таблице
+1. Создать индекс к таблице
 explain analyze
 select tf.ticket_no,
-	   tf.flight_id,
-	   tf.fare_conditions,
-	   tf.amount
+	tf.flight_id,
+	tf.fare_conditions,
+	tf.amount
 from bookings.ticket_flights as tf 
 where flight_id = '7683'
+
 /*
 Gather  (cost=1000.00..114650.76 rows=102 width=32) (actual time=0.629..451.414 rows=57 loops=1)
   Workers Planned: 2
